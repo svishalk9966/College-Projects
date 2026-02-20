@@ -1,0 +1,67 @@
+/* ------------------ Custom Styling + Dark Mode Support ------------------ */
+
+/* ✅ Gradient Background ONLY when body has .gradient-background */
+.gradient-background {
+  background: linear-gradient(-45deg, #1d4c7a, #27496d, #0c1f33, #1f4068);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #212529;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+/* Gradient Animation Keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Button Disabled Style */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Quiz Options */
+#options button {
+  font-size: 1rem;
+}
+
+/* Quiz Card Layout */
+.card {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Timer Styling */
+#timer {
+  font-weight: bold;
+  color: #dc3545;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  color: #f1f1f1;
+  background-color: #121212 !important;
+}
+
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode button.btn-outline-primary {
+  color: #f1f1f1;
+  border-color: #6c757d;
+}
+
+body.dark-mode button.btn-outline-primary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Dark Mode Toggle Button */
+body.dark-mode #dark-mode-toggle {
+  background-color: #6c757d;
+  color: #fff;
+}
