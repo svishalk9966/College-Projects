@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Rural Job Portal</title>
+  <link rel="stylesheet" href="styles2.css">
+
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Login to Your Account</h2>
+
+  <form id="loginForm">
+    <label>Email:</label><br>
+    <input type="email" id="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password"><br>
+    <span id="passwordError" class="error"></span><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="create-account.html">Create one</a></p>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+
+      emailError.textContent = "";
+      passwordError.textContent = "";
+
+      let isValid = true;
+
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === "") {
+        emailError.textContent = "Email is required.";
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        emailError.textContent = "Enter a valid email address.";
+        isValid = false;
+      }
+
+      // Password validation
+      if (password === "") {
+        passwordError.textContent = "Password is required.";
+        isValid = false;
+      } else if (password.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters.";
+        isValid = false;
+      }
+
+      // If all validations pass
+      if (isValid) {
+        // Future: API/database authentication
+        window.location.href = "dashboard.html";
+      }
+    });
+  </script>
+
+</body>
+</html>

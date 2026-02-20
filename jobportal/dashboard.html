@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rural Job Portal - Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    :root {
+  --link: #0a66c2;
+  --link-underline: #004182;
+  --heading: #202124;
+  --paragraph: #5f5f5f;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #f3f2ef;
+      background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+    }
+
+    .container-fluid {
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: white;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      position: fixed;
+      box-shadow:  0 0 5px rgba(0,0,0,0.3) ;
+      overflow-y: auto;
+    
+    }
+
+    .content {
+      margin-left: 240px;
+      margin-right: 260px;
+      padding: 20px;
+      height: 100vh;
+      overflow-y: auto;
+      width: calc(100% - 500px);
+    }
+
+    .right-sidebar {
+      width: 260px;
+      background: white;
+      padding: 15px;
+      border-left: 1px solid #ddd;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .profile h5{
+      color: var(--heading);
+    }
+
+    .profile p {
+      color: var(--paragraph);
+    }
+    .sidebar .nav-link{
+      position: relative;
+      color: var(--link);
+      text-decoration: none;
+      margin-top: 8px;
+      /* gap: 30px; */
+    }
+    .sidebar .nav-link:hover{
+      color: var(--link-underline);
+    }
+    .job-card {
+     /* background: white;*/
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .right-sidebar h6 {
+      margin-top: 15px;
+    }
+
+    .right-sidebar ul {
+      padding-left: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="profile">
+      <img src="https://static.vecteezy.com/system/resources/previews/033/643/489/non_2x/female-electrician-at-work-on-a-fuse-box-adorned-in-safety-gear-generative-ai-photo.jpg" alt="User">
+      <h5>Rahul Kumar</h5>
+      <p>Electrician · Tailor</p>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">My Applications</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Post a job or search jobs...">
+    </div>
+    <div class="job-card">
+      <h5>Electrician</h5>
+      <p><strong>Green Energy Ltd</strong> - Patna</p>
+      <p>7 years experience</p>
+      <button class="btn btn-sm btn-outline-primary">Apply</button>
+    </div>
+    <div class="job-card">
+      <h5>Tailor</h5>
+      <p><strong>Clothing Shop</strong> - Raipur</p>
+      <p>5 years experience</p>
+      <button class="btn btn-sm btn-outline-primary">Apply</button>
+    </div>
+    <div class="job-card">
+      <h5>Delivery Boy</h5>
+      <p><strong>Flipkart</strong> - Delhi</p>
+      <p>Driving licence</p>
+      <button class="btn btn-sm btn-outline-primary">Apply</button>
+    </div>
+    <div class="job-card">
+      <h5>Plumber</h5>
+      <p><strong>Plumber Shop</strong> - Mirzapur</p>
+      <p>2 years experience</p>
+      <button class="btn btn-sm btn-outline-primary">Apply</button>
+    </div>
+    <!-- Aur bhi job-card yahin add kar sakta hai -->
+  </div>
+
+  <div class="right-sidebar">
+    <h6>Trending Skills</h6>
+    <ul>
+      <li>Electrician</li>
+      <li>Welder</li>
+      <li>Carpentry</li>
+    </ul>
+    <h6>Suggested Jobs</h6>
+    <ul>
+      <li>Welder - Ranchi</li>
+      <li>Mason - Lucknow</li>
+    </ul>
+  </div>
+</body>
+</html>

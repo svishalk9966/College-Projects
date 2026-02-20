@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account - Rural Job Portal</title>
+  <link rel="stylesheet" href="styles1.css">
+
+  <script>
+    function validateForm() {
+      const name = document.forms["registerForm"]["name"].value;
+      const email = document.forms["registerForm"]["email"].value;
+      const password = document.forms["registerForm"]["password"].value;
+      const job = document.forms["registerForm"]["job"].value;
+
+      // Full Name validation (letters & spaces only)
+      const namePattern = /^[A-Za-z ]{3,}$/;
+      if (!namePattern.test(name)) {
+        alert("Full Name must contain only letters and at least 3 characters.");
+        return false;
+      }
+
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      // Password validation
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      // Job selection validation
+      if (job === "") {
+        alert("Please select a job category.");
+        return false;
+      }
+
+      return true; // form will submit
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Create Your Account</h2>
+
+  <form name="registerForm" action="#" method="post" onsubmit="return validateForm()">
+
+    <label>Full Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" minlength="6" required><br><br>
+
+    <label>Job Category:</label><br>
+    <select name="job" required>
+      <option value="">-- Select Job --</option>
+      <option>Electrician</option>
+      <option>Plumber</option>
+      <option>Maid</option>
+      <option>Delivery Boy</option>
+      <option>Driver</option>
+      <option>Tailor</option>
+      <option>Construction Worker</option>
+    </select><br><br>
+
+    <button type="submit">Create Account</button>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login here</a></p>
+</body>
+</html>

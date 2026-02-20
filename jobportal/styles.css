@@ -1,0 +1,179 @@
+
+:root {
+  --primary: #6a0dad;
+  --light: #f5f4fa;
+  --dark: #222;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #d1c4e9, #f3e5f5);
+  color: var(--dark);
+  /* background-color: #d1c4e9; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/argyle.png"); */
+  background-color: #d1c4e9;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  /* background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); */
+}
+
+header {
+  background: linear-gradient(to right, #6a0dad, #8e24aa);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #004f8c;
+  background-color: #004f8c;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+  /* background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); */
+}
+
+header h1 {
+  font-size: 3.5rem;
+  animation: fadeInDown 1s ease;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/034/233/478/non_2x/realistic-of-newspaper-paper-grunge-vintage-old-aged-texture-background-photo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.search-section {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.search-box {
+  padding: 15px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.mic-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mic-btn:hover {
+  transform: scale(1.1);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 10px;
+  gap: 15px;
+}
+
+.category {
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+.category-link {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 16px;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 20px;
+  gap: 25px;
+}
+
+.step {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+}
+
+.step h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.step-link{
+  text-decoration: none;
+  color: var(--dark);
+  /* font-size: 16px; */
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.05);
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .search-box {
+    width: 80%;
+  }
+
+  .step {
+    width: 80%;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

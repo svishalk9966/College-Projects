@@ -1,0 +1,102 @@
+/* Universal styling for both Login & Create Account pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #1e222d;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png"); */
+    /* background: linear-gradient(135deg, #c3ecff,#e0c3fc); */
+    /* background-image: url("login2.jpg"); */
+    background-image: url("login.jpeg");
+        background-image: url("https://www.touristsecrets.com/wp-content/uploads/2023/12/what-is-rural-urban-migration-1703588655.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+  
+  h2 {
+    /* color: #2c3e50; */
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  form {
+    /* background-color: #ffffff; */
+    backface-visibility: visible;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    width: 320px;
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Labels */
+  label {
+    /* color: #2c3e50; */
+    color: #20303f;
+    /* color: #1a1919fa; */
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Inputs and Select */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f0f6ff;
+    font-size: 14px;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    background-color: #0b84ff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #006fd6;
+    box-shadow: 0 0 10px #006fd6;
+    transform: scale(1.02);
+  }
+  
+  /* Bottom text */
+  p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    /* color: #2c3e50; */
+    color: #fff;
+  }
+  
+  a {
+    color: #0b84ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
