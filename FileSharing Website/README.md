@@ -1,0 +1,1 @@
+FileShare Login System Final (Flask + SQLite + Console OTP testing + File password + Expiry)\n\nCopy .env.example to .env and run:\n\npip install -r requirements.txt\npython app.py\n\nOpen http://localhost:5000/register\n
